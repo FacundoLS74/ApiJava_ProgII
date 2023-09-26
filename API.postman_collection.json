@@ -1,0 +1,514 @@
+{
+	"info": {
+		"_postman_id": "2d735ba6-2eb6-4aaa-96cf-2ecfbe2817cd",
+		"name": "API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27700819"
+	},
+	"item": [
+		{
+			"name": "Cliente",
+			"item": [
+				{
+					"name": "CrearCliente",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\": \"Cliente1\",\r\n    \"apellido\": \"Client1.1\",\r\n    \"correo\": \"client1@gmail.com\",\r\n    \"dni\": \"44630865\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8100/cliente/crear",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8100",
+							"path": [
+								"cliente",
+								"crear"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "BuscarTodos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8100/cliente/obtener",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8100",
+							"path": [
+								"cliente",
+								"obtener"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "BuscarPorID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8100/cliente/obtenerPorId/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8100",
+							"path": [
+								"cliente",
+								"obtenerPorId",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateByID",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\": \"NuevoNombre\",\r\n    \"apellido\": \"NuevoApellido\",\r\n    \"correo\": \"nuevo@correo.com\",\r\n    \"dni\": \"12345678\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8100/cliente/actualizar/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8100",
+							"path": [
+								"cliente",
+								"actualizar",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "EliminarPorID",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8100/cliente/eliminar/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8100",
+							"path": [
+								"cliente",
+								"eliminar",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Barbero",
+			"item": [
+				{
+					"name": "CrearBarbero",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\": \"Ivan\",\r\n    \"apellido\": \"Giani\",\r\n    \"correo\": \"IVG@gmail.com\",\r\n    \"dni\": \"43562888\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8100/barbero/crear",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8100",
+							"path": [
+								"barbero",
+								"crear"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "BuscarTodos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8100/barbero/obtenerTodos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8100",
+							"path": [
+								"barbero",
+								"obtenerTodos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "BuscarPorID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8100/barbero/obtenerID/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8100",
+							"path": [
+								"barbero",
+								"obtenerID",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ActualizarPorID",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\": \"AAAA\",\r\n    \"apellido\": \"AAAAAA\",\r\n    \"correo\": \"12312312321@gmail.com\",\r\n    \"dni\": \"1231231231231\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8100/barbero/actualizar/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8100",
+							"path": [
+								"barbero",
+								"actualizar",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "EliminarPorID",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8100/barbero/eliminar/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8100",
+							"path": [
+								"barbero",
+								"eliminar",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Barberia",
+			"item": [
+				{
+					"name": "CrearBarberia",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"direccion\": \"Calle Principal #123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8100/barberia/crear",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8100",
+							"path": [
+								"barberia",
+								"crear"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "BuscarTodas",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8100/barberia/obtenerTodas",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8100",
+							"path": [
+								"barberia",
+								"obtenerTodas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "BuscarPorID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8100/barberia/obtenerID/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8100",
+							"path": [
+								"barberia",
+								"obtenerID",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ActualizarPorID",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"direccion\": \"Calle Derqui 6125\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8100/barberia/actualizar/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8100",
+							"path": [
+								"barberia",
+								"actualizar",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "EliminarPorID",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8100/barberia/eliminar/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8100",
+							"path": [
+								"barberia",
+								"eliminar",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Turno",
+			"item": [
+				{
+					"name": "CrearTurno",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"cliente\": {\r\n        \"id\": 1\r\n    },\r\n    \"barbero\": {\r\n        \"id\": 1\r\n    },\r\n    \"barberia\": {\r\n        \"id\": 1\r\n    },\r\n    \"fechaHora\": \"2023-08-26T14:30:00\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8100/turno/crear",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8100",
+							"path": [
+								"turno",
+								"crear"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "BuscarTodos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8100/turno/obtener",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8100",
+							"path": [
+								"turno",
+								"obtener"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "BuscarPorID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8100/turno/buscarID/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8100",
+							"path": [
+								"turno",
+								"buscarID",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ActualizarPorID",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"cliente\": {\r\n        \"id\": 1\r\n    },\r\n    \"barbero\": {\r\n        \"id\": 1\r\n    },\r\n    \"barberia\": {\r\n        \"id\": 1\r\n    },\r\n    \"fechaHora\": \"2023-08-26T21:00:00\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8100/turno/actualizar/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8100",
+							"path": [
+								"turno",
+								"actualizar",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "EliminarPorID",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8100/turno/eliminar/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8100",
+							"path": [
+								"turno",
+								"eliminar",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
