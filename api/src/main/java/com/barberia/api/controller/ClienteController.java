@@ -1,5 +1,6 @@
 package com.barberia.api.controller;
 
+import com.barberia.api.exceptions.BadRequestException;
 import com.barberia.api.persistence.entities.Cliente;
 import com.barberia.api.service.ClienteService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,9 +18,15 @@ public class ClienteController {
     @Autowired
     ClienteService clienteService;
 
+    @ExceptionHandler(BadRequestException.class)
+    public ResponseEntity<String> handleBadRequestException(BadRequestException e) {
+        return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("Error en la solicitud: " + e.getMessage());
+    }
+
     @PostMapping("/crear")
-    public ResponseEntity crear(@RequestBody Cliente cliente){clienteService.guardarCliente(cliente);
-        return ResponseEntity.status(HttpStatus.CREATED).body(cliente);
+    public ResponseEntity<String> crear(@RequestBody Cliente cliente) throws BadRequestException {
+        clienteService.guardarCliente(cliente);
+        return ResponseEntity.status(HttpStatus.CREATED).body("Cliente creado con éxito");
     }
 
 
