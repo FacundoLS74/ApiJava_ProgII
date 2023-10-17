@@ -1,0 +1,10 @@
+package com.barberia.api.persistence.repository;
+
+import com.barberia.api.models.RoleEntity;
+import org.springframework.data.repository.CrudRepository;
+import org.springframework.stereotype.Repository;
+
+@Repository
+public interface RoleRepository extends CrudRepository<RoleEntity, Long> {
+
+}
