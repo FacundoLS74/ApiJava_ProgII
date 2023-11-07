@@ -1,0 +1,68 @@
+/* stylesLogin.css */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.login-container {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 300px;
+    text-align: center;
+}
+
+h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+form {
+    text-align: left;
+}
+
+label {
+    display: block;
+    font-size: 14px;
+    color: #666;
+    margin-top: 10px;
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 92%;
+    padding: 10px;
+    margin-top: 5px; /* Añade el valor de píxeles apropiado, por ejemplo, 5px */
+    margin-right: 100px;
+    border: 1px solid #ccc;
+    border-radius: 8px; /* Ajusta el valor de border-radius según tus preferencias */
+}
+
+button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    margin: 15px auto; /* Centra el botón horizontalmente */
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.login-button {
+    display: block;
+    margin: 15px auto;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
