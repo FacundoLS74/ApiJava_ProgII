@@ -1,0 +1,524 @@
+{
+	"info": {
+		"_postman_id": "475b33e8-ea99-437d-85e8-361507fc1c64",
+		"name": "API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "27700819",
+		"_collection_link": "https://lively-spaceship-624906.postman.co/workspace/New-Team-Workspace~b6e8fcc3-5bb5-43a9-846c-47909c9183aa/collection/27700819-475b33e8-ea99-437d-85e8-361507fc1c64?action=share&source=collection_link&creator=27700819"
+	},
+	"item": [
+		{
+			"name": "Cliente",
+			"item": [
+				{
+					"name": "CrearCliente",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJmYWN1bmRvMSIsImlhdCI6MTcwMTM5OTQzNiwiZXhwIjoxNzAxNDg1ODM2fQ.hDrxmPXbIPiGSA_-LZQ9i9nS-mynKg1jRdwBlQfMGdg"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\": \"Cliente1\",\r\n    \"apellido\": \"Clientazo1\",\r\n    \"correo\": \"cliente1@gmail.com\",\r\n    \"dni\": \"44630865\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8081/cliente/crear"
+					},
+					"response": []
+				},
+				{
+					"name": "BuscarTodos",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJmYWN1bmRvMSIsImlhdCI6MTcwMTM5OTQzNiwiZXhwIjoxNzAxNDg1ODM2fQ.hDrxmPXbIPiGSA_-LZQ9i9nS-mynKg1jRdwBlQfMGdg"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8081/cliente/obtenerTodos"
+					},
+					"response": []
+				},
+				{
+					"name": "BuscarPorID",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJmYWN1bmRvMSIsImlhdCI6MTcwMTM5OTQzNiwiZXhwIjoxNzAxNDg1ODM2fQ.hDrxmPXbIPiGSA_-LZQ9i9nS-mynKg1jRdwBlQfMGdg"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8081/cliente/obtenerPorId/1"
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateByID",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJmYWN1bmRvMSIsImlhdCI6MTcwMTM5OTQzNiwiZXhwIjoxNzAxNDg1ODM2fQ.hDrxmPXbIPiGSA_-LZQ9i9nS-mynKg1jRdwBlQfMGdg"
+							}
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\": \"NOMBREEJEMPLO\",\r\n    \"apellido\": \"NOMBREEJEMPLONOMBREEJEMPLO\",\r\n    \"correo\": \"NOMBREEJEMPLO@correo.com\",\r\n    \"dni\": \"12345678\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8081/cliente/actualizar/1"
+					},
+					"response": []
+				},
+				{
+					"name": "EliminarPorID",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJmYWN1bmRvMSIsImlhdCI6MTcwMTM5OTQzNiwiZXhwIjoxNzAxNDg1ODM2fQ.hDrxmPXbIPiGSA_-LZQ9i9nS-mynKg1jRdwBlQfMGdg"
+							}
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": "http://localhost:8081/cliente/eliminar/1"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Barbero",
+			"item": [
+				{
+					"name": "CrearBarbero",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJmYWN1bmRvMSIsImlhdCI6MTcwMTM5OTQzNiwiZXhwIjoxNzAxNDg1ODM2fQ.hDrxmPXbIPiGSA_-LZQ9i9nS-mynKg1jRdwBlQfMGdg"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\": \"Ivan\",\r\n    \"apellido\": \"Giani\",\r\n    \"correo\": \"IVG@gmail.com\",\r\n    \"dni\": \"43562888\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8081/barbero/crear"
+					},
+					"response": []
+				},
+				{
+					"name": "BuscarTodos",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJmYWN1bmRvMSIsImlhdCI6MTcwMTM5OTQzNiwiZXhwIjoxNzAxNDg1ODM2fQ.hDrxmPXbIPiGSA_-LZQ9i9nS-mynKg1jRdwBlQfMGdg"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8081/barbero/obtenerTodos"
+					},
+					"response": []
+				},
+				{
+					"name": "BuscarPorID",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJmYWN1bmRvMSIsImlhdCI6MTcwMTM5OTQzNiwiZXhwIjoxNzAxNDg1ODM2fQ.hDrxmPXbIPiGSA_-LZQ9i9nS-mynKg1jRdwBlQfMGdg"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8081/barbero/obtenerID/1"
+					},
+					"response": []
+				},
+				{
+					"name": "ActualizarPorID",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJmYWN1bmRvMSIsImlhdCI6MTcwMTM5OTQzNiwiZXhwIjoxNzAxNDg1ODM2fQ.hDrxmPXbIPiGSA_-LZQ9i9nS-mynKg1jRdwBlQfMGdg"
+							}
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\": \"AAAA\",\r\n    \"apellido\": \"AAAAAA\",\r\n    \"correo\": \"12312312321@gmail.com\",\r\n    \"dni\": \"1231231231231\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8081/barbero/actualizar/1"
+					},
+					"response": []
+				},
+				{
+					"name": "EliminarPorID",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "http://localhost:8100/barbero/eliminar/1"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Barberia",
+			"item": [
+				{
+					"name": "CrearBarberia",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJmYWN1bmRvMSIsImlhdCI6MTcwMTM5OTQzNiwiZXhwIjoxNzAxNDg1ODM2fQ.hDrxmPXbIPiGSA_-LZQ9i9nS-mynKg1jRdwBlQfMGdg"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"direccion\": \"Mendoza 1974\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8081/barberia/crear"
+					},
+					"response": []
+				},
+				{
+					"name": "BuscarTodas",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJmYWN1bmRvMSIsImlhdCI6MTcwMTM5OTQzNiwiZXhwIjoxNzAxNDg1ODM2fQ.hDrxmPXbIPiGSA_-LZQ9i9nS-mynKg1jRdwBlQfMGdg"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8081/barberia/obtenerTodas"
+					},
+					"response": []
+				},
+				{
+					"name": "BuscarPorID",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJmYWN1bmRvMSIsImlhdCI6MTcwMTM5OTQzNiwiZXhwIjoxNzAxNDg1ODM2fQ.hDrxmPXbIPiGSA_-LZQ9i9nS-mynKg1jRdwBlQfMGdg"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8081/barberia/obtenerID/1"
+					},
+					"response": []
+				},
+				{
+					"name": "ActualizarPorID",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJmYWN1bmRvMSIsImlhdCI6MTcwMTM5OTQzNiwiZXhwIjoxNzAxNDg1ODM2fQ.hDrxmPXbIPiGSA_-LZQ9i9nS-mynKg1jRdwBlQfMGdg"
+							}
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"direccion\": \"Calle Derqui 6125\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8081/barberia/actualizar/1"
+					},
+					"response": []
+				},
+				{
+					"name": "EliminarPorID",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "http://localhost:8100/barberia/eliminar/1"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Turno",
+			"item": [
+				{
+					"name": "CrearTurno",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJmYWN1bmRvMSIsImlhdCI6MTcwMTM5OTQzNiwiZXhwIjoxNzAxNDg1ODM2fQ.hDrxmPXbIPiGSA_-LZQ9i9nS-mynKg1jRdwBlQfMGdg"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"cliente\": {\r\n        \"id\": 1\r\n    },\r\n    \"barbero\": {\r\n        \"id\": 1\r\n    },\r\n    \"barberia\": {\r\n        \"id\": 1\r\n    },\r\n    \"fechaHora\": \"2023-08-26T14:30:00\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8081/turno/crear"
+					},
+					"response": []
+				},
+				{
+					"name": "BuscarTodos",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJmYWN1bmRvMSIsImlhdCI6MTcwMTM5OTQzNiwiZXhwIjoxNzAxNDg1ODM2fQ.hDrxmPXbIPiGSA_-LZQ9i9nS-mynKg1jRdwBlQfMGdg"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8081/turno/obtener"
+					},
+					"response": []
+				},
+				{
+					"name": "BuscarPorID",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJmYWN1bmRvMSIsImlhdCI6MTcwMTM5OTQzNiwiZXhwIjoxNzAxNDg1ODM2fQ.hDrxmPXbIPiGSA_-LZQ9i9nS-mynKg1jRdwBlQfMGdg"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8081/turno/buscarID/3"
+					},
+					"response": []
+				},
+				{
+					"name": "ActualizarPorID",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJmYWN1bmRvMSIsImlhdCI6MTcwMTM5OTQzNiwiZXhwIjoxNzAxNDg1ODM2fQ.hDrxmPXbIPiGSA_-LZQ9i9nS-mynKg1jRdwBlQfMGdg"
+							}
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"cliente\": {\r\n        \"id\": 1\r\n    },\r\n    \"barbero\": {\r\n        \"id\": 1\r\n    },\r\n    \"barberia\": {\r\n        \"id\": 1\r\n    },\r\n    \"fechaHora\": \"2023-08-26T21:00:00\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8081/turno/actualizar/2"
+					},
+					"response": []
+				},
+				{
+					"name": "EliminarPorID",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "http://localhost:8100/turno/eliminar/1"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "ProbandoSecurity",
+			"item": [
+				{
+					"name": "Access",
+					"item": [
+						{
+							"name": "Admin",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJmYWN1bmRvMSIsImlhdCI6MTY5OTIyMjIxNSwiZXhwIjoxNjk5MzA4NjE1fQ.R204PDdJ763skZn1tYVRQPFbrsb0rZQ9Mg4VKDd_G_s"
+									}
+								},
+								"method": "GET",
+								"header": [],
+								"url": "http://localhost:8081/accessAdmin"
+							},
+							"response": []
+						},
+						{
+							"name": "User",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJsZW9uZWwiLCJpYXQiOjE2OTkyMjIzNzksImV4cCI6MTY5OTMwODc3OX0.9bq9VpaIESy3vf-OTPAvhXVB2p1l5hIZafRK7-1pFj4"
+									}
+								},
+								"method": "GET",
+								"header": [],
+								"url": "http://localhost:8081/accessUser"
+							},
+							"response": []
+						},
+						{
+							"name": "Invited",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJpbnZpdGFkbyIsImlhdCI6MTY5OTIyMjQyMiwiZXhwIjoxNjk5MzA4ODIyfQ.R_X5-WHv7xoQSVBqcIKyMYJUR2kzoJD8fhtp7Mi3p9Y"
+									}
+								},
+								"method": "GET",
+								"header": [],
+								"url": "http://localhost:8081/accessInvited"
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Hello Secured",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "123"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8081/helloSecured"
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8081/deleteUser",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": {
+								"password": "1234",
+								"username": "facundo"
+							}
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "id",
+									"value": "2",
+									"type": "text"
+								}
+							]
+						},
+						"url": "http://localhost:8081/deleteUser"
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8081/createUser",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": {
+								"password": "1234",
+								"username": "facundo"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"probando@email.com\",\r\n    \"username\": \"facu\",\r\n    \"password\": \"123\",\r\n    \"roles\":[\"USER\"]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8081/createUser"
+					},
+					"response": []
+				},
+				{
+					"name": "Test Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\":\"facundo1\",\r\n    \"password\":\"1234\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8081/login"
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

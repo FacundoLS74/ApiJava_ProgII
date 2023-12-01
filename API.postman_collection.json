@@ -1,9 +1,10 @@
 {
 	"info": {
-		"_postman_id": "2d735ba6-2eb6-4aaa-96cf-2ecfbe2817cd",
+		"_postman_id": "475b33e8-ea99-437d-85e8-361507fc1c64",
 		"name": "API",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_exporter_id": "27700819"
+		"_exporter_id": "27700819",
+		"_collection_link": "https://lively-spaceship-624906.postman.co/workspace/New-Team-Workspace~b6e8fcc3-5bb5-43a9-846c-47909c9183aa/collection/27700819-475b33e8-ea99-437d-85e8-361507fc1c64?action=share&source=collection_link&creator=27700819"
 	},
 	"item": [
 		{
@@ -12,11 +13,21 @@
 				{
 					"name": "CrearCliente",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJmYWN1bmRvMSIsImlhdCI6MTcwMTM5OTQzNiwiZXhwIjoxNzAxNDg1ODM2fQ.hDrxmPXbIPiGSA_-LZQ9i9nS-mynKg1jRdwBlQfMGdg",
+									"type": "string"
+								}
+							]
+						},
 						"method": "POST",
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"nombre\": \"Cliente1\",\r\n    \"apellido\": \"Client1.1\",\r\n    \"correo\": \"client1@gmail.com\",\r\n    \"dni\": \"44630865\"\r\n}",
+							"raw": "{\r\n    \"nombre\": \"Cliente1\",\r\n    \"apellido\": \"Clientazo1\",\r\n    \"correo\": \"cliente1@gmail.com\",\r\n    \"dni\": \"44630865\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -24,12 +35,12 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8100/cliente/crear",
+							"raw": "http://localhost:8081/cliente/crear",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "8100",
+							"port": "8081",
 							"path": [
 								"cliente",
 								"crear"
@@ -41,18 +52,28 @@
 				{
 					"name": "BuscarTodos",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJmYWN1bmRvMSIsImlhdCI6MTcwMTM5OTQzNiwiZXhwIjoxNzAxNDg1ODM2fQ.hDrxmPXbIPiGSA_-LZQ9i9nS-mynKg1jRdwBlQfMGdg",
+									"type": "string"
+								}
+							]
+						},
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8100/cliente/obtener",
+							"raw": "http://localhost:8081/cliente/obtenerTodos",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "8100",
+							"port": "8081",
 							"path": [
 								"cliente",
-								"obtener"
+								"obtenerTodos"
 							]
 						}
 					},
@@ -61,19 +82,29 @@
 				{
 					"name": "BuscarPorID",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJmYWN1bmRvMSIsImlhdCI6MTcwMTM5OTQzNiwiZXhwIjoxNzAxNDg1ODM2fQ.hDrxmPXbIPiGSA_-LZQ9i9nS-mynKg1jRdwBlQfMGdg",
+									"type": "string"
+								}
+							]
+						},
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8100/cliente/obtenerPorId/2",
+							"raw": "http://localhost:8081/cliente/obtenerPorId/1",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "8100",
+							"port": "8081",
 							"path": [
 								"cliente",
 								"obtenerPorId",
-								"2"
+								"1"
 							]
 						}
 					},
@@ -82,11 +113,21 @@
 				{
 					"name": "UpdateByID",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJmYWN1bmRvMSIsImlhdCI6MTcwMTM5OTQzNiwiZXhwIjoxNzAxNDg1ODM2fQ.hDrxmPXbIPiGSA_-LZQ9i9nS-mynKg1jRdwBlQfMGdg",
+									"type": "string"
+								}
+							]
+						},
 						"method": "PUT",
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"nombre\": \"NuevoNombre\",\r\n    \"apellido\": \"NuevoApellido\",\r\n    \"correo\": \"nuevo@correo.com\",\r\n    \"dni\": \"12345678\"\r\n}",
+							"raw": "{\r\n    \"nombre\": \"NOMBREEJEMPLO\",\r\n    \"apellido\": \"NOMBREEJEMPLONOMBREEJEMPLO\",\r\n    \"correo\": \"NOMBREEJEMPLO@correo.com\",\r\n    \"dni\": \"12345678\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -94,12 +135,12 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8100/cliente/actualizar/1",
+							"raw": "http://localhost:8081/cliente/actualizar/1",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "8100",
+							"port": "8081",
 							"path": [
 								"cliente",
 								"actualizar",
@@ -112,15 +153,25 @@
 				{
 					"name": "EliminarPorID",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJmYWN1bmRvMSIsImlhdCI6MTcwMTM5OTQzNiwiZXhwIjoxNzAxNDg1ODM2fQ.hDrxmPXbIPiGSA_-LZQ9i9nS-mynKg1jRdwBlQfMGdg",
+									"type": "string"
+								}
+							]
+						},
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8100/cliente/eliminar/1",
+							"raw": "http://localhost:8081/cliente/eliminar/1",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "8100",
+							"port": "8081",
 							"path": [
 								"cliente",
 								"eliminar",
@@ -138,6 +189,16 @@
 				{
 					"name": "CrearBarbero",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJmYWN1bmRvMSIsImlhdCI6MTcwMTM5OTQzNiwiZXhwIjoxNzAxNDg1ODM2fQ.hDrxmPXbIPiGSA_-LZQ9i9nS-mynKg1jRdwBlQfMGdg",
+									"type": "string"
+								}
+							]
+						},
 						"method": "POST",
 						"header": [],
 						"body": {
@@ -150,12 +211,12 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8100/barbero/crear",
+							"raw": "http://localhost:8081/barbero/crear",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "8100",
+							"port": "8081",
 							"path": [
 								"barbero",
 								"crear"
@@ -167,15 +228,25 @@
 				{
 					"name": "BuscarTodos",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJmYWN1bmRvMSIsImlhdCI6MTcwMTM5OTQzNiwiZXhwIjoxNzAxNDg1ODM2fQ.hDrxmPXbIPiGSA_-LZQ9i9nS-mynKg1jRdwBlQfMGdg",
+									"type": "string"
+								}
+							]
+						},
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8100/barbero/obtenerTodos",
+							"raw": "http://localhost:8081/barbero/obtenerTodos",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "8100",
+							"port": "8081",
 							"path": [
 								"barbero",
 								"obtenerTodos"
@@ -187,15 +258,25 @@
 				{
 					"name": "BuscarPorID",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJmYWN1bmRvMSIsImlhdCI6MTcwMTM5OTQzNiwiZXhwIjoxNzAxNDg1ODM2fQ.hDrxmPXbIPiGSA_-LZQ9i9nS-mynKg1jRdwBlQfMGdg",
+									"type": "string"
+								}
+							]
+						},
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8100/barbero/obtenerID/1",
+							"raw": "http://localhost:8081/barbero/obtenerID/1",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "8100",
+							"port": "8081",
 							"path": [
 								"barbero",
 								"obtenerID",
@@ -208,6 +289,16 @@
 				{
 					"name": "ActualizarPorID",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJmYWN1bmRvMSIsImlhdCI6MTcwMTM5OTQzNiwiZXhwIjoxNzAxNDg1ODM2fQ.hDrxmPXbIPiGSA_-LZQ9i9nS-mynKg1jRdwBlQfMGdg",
+									"type": "string"
+								}
+							]
+						},
 						"method": "PUT",
 						"header": [],
 						"body": {
@@ -220,12 +311,12 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8100/barbero/actualizar/1",
+							"raw": "http://localhost:8081/barbero/actualizar/1",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "8100",
+							"port": "8081",
 							"path": [
 								"barbero",
 								"actualizar",
@@ -264,11 +355,21 @@
 				{
 					"name": "CrearBarberia",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJmYWN1bmRvMSIsImlhdCI6MTcwMTM5OTQzNiwiZXhwIjoxNzAxNDg1ODM2fQ.hDrxmPXbIPiGSA_-LZQ9i9nS-mynKg1jRdwBlQfMGdg",
+									"type": "string"
+								}
+							]
+						},
 						"method": "POST",
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"direccion\": \"Calle Principal #123\"\r\n}",
+							"raw": "{\r\n    \"direccion\": \"Mendoza 1974\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -276,12 +377,12 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8100/barberia/crear",
+							"raw": "http://localhost:8081/barberia/crear",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "8100",
+							"port": "8081",
 							"path": [
 								"barberia",
 								"crear"
@@ -293,15 +394,25 @@
 				{
 					"name": "BuscarTodas",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJmYWN1bmRvMSIsImlhdCI6MTcwMTM5OTQzNiwiZXhwIjoxNzAxNDg1ODM2fQ.hDrxmPXbIPiGSA_-LZQ9i9nS-mynKg1jRdwBlQfMGdg",
+									"type": "string"
+								}
+							]
+						},
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8100/barberia/obtenerTodas",
+							"raw": "http://localhost:8081/barberia/obtenerTodas",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "8100",
+							"port": "8081",
 							"path": [
 								"barberia",
 								"obtenerTodas"
@@ -313,15 +424,25 @@
 				{
 					"name": "BuscarPorID",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJmYWN1bmRvMSIsImlhdCI6MTcwMTM5OTQzNiwiZXhwIjoxNzAxNDg1ODM2fQ.hDrxmPXbIPiGSA_-LZQ9i9nS-mynKg1jRdwBlQfMGdg",
+									"type": "string"
+								}
+							]
+						},
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8100/barberia/obtenerID/1",
+							"raw": "http://localhost:8081/barberia/obtenerID/1",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "8100",
+							"port": "8081",
 							"path": [
 								"barberia",
 								"obtenerID",
@@ -334,6 +455,16 @@
 				{
 					"name": "ActualizarPorID",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJmYWN1bmRvMSIsImlhdCI6MTcwMTM5OTQzNiwiZXhwIjoxNzAxNDg1ODM2fQ.hDrxmPXbIPiGSA_-LZQ9i9nS-mynKg1jRdwBlQfMGdg",
+									"type": "string"
+								}
+							]
+						},
 						"method": "PUT",
 						"header": [],
 						"body": {
@@ -346,12 +477,12 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8100/barberia/actualizar/1",
+							"raw": "http://localhost:8081/barberia/actualizar/1",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "8100",
+							"port": "8081",
 							"path": [
 								"barberia",
 								"actualizar",
@@ -390,6 +521,16 @@
 				{
 					"name": "CrearTurno",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJmYWN1bmRvMSIsImlhdCI6MTcwMTM5OTQzNiwiZXhwIjoxNzAxNDg1ODM2fQ.hDrxmPXbIPiGSA_-LZQ9i9nS-mynKg1jRdwBlQfMGdg",
+									"type": "string"
+								}
+							]
+						},
 						"method": "POST",
 						"header": [],
 						"body": {
@@ -402,12 +543,12 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8100/turno/crear",
+							"raw": "http://localhost:8081/turno/crear",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "8100",
+							"port": "8081",
 							"path": [
 								"turno",
 								"crear"
@@ -419,15 +560,25 @@
 				{
 					"name": "BuscarTodos",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJmYWN1bmRvMSIsImlhdCI6MTcwMTM5OTQzNiwiZXhwIjoxNzAxNDg1ODM2fQ.hDrxmPXbIPiGSA_-LZQ9i9nS-mynKg1jRdwBlQfMGdg",
+									"type": "string"
+								}
+							]
+						},
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8100/turno/obtener",
+							"raw": "http://localhost:8081/turno/obtener",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "8100",
+							"port": "8081",
 							"path": [
 								"turno",
 								"obtener"
@@ -439,15 +590,25 @@
 				{
 					"name": "BuscarPorID",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJmYWN1bmRvMSIsImlhdCI6MTcwMTM5OTQzNiwiZXhwIjoxNzAxNDg1ODM2fQ.hDrxmPXbIPiGSA_-LZQ9i9nS-mynKg1jRdwBlQfMGdg",
+									"type": "string"
+								}
+							]
+						},
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8100/turno/buscarID/3",
+							"raw": "http://localhost:8081/turno/buscarID/3",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "8100",
+							"port": "8081",
 							"path": [
 								"turno",
 								"buscarID",
@@ -460,6 +621,16 @@
 				{
 					"name": "ActualizarPorID",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJmYWN1bmRvMSIsImlhdCI6MTcwMTM5OTQzNiwiZXhwIjoxNzAxNDg1ODM2fQ.hDrxmPXbIPiGSA_-LZQ9i9nS-mynKg1jRdwBlQfMGdg",
+									"type": "string"
+								}
+							]
+						},
 						"method": "PUT",
 						"header": [],
 						"body": {
@@ -472,16 +643,16 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8100/turno/actualizar/1",
+							"raw": "http://localhost:8081/turno/actualizar/2",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "8100",
+							"port": "8081",
 							"path": [
 								"turno",
 								"actualizar",
-								"1"
+								"2"
 							]
 						}
 					},
@@ -503,6 +674,247 @@
 								"turno",
 								"eliminar",
 								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "ProbandoSecurity",
+			"item": [
+				{
+					"name": "Access",
+					"item": [
+						{
+							"name": "Admin",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJmYWN1bmRvMSIsImlhdCI6MTY5OTIyMjIxNSwiZXhwIjoxNjk5MzA4NjE1fQ.R204PDdJ763skZn1tYVRQPFbrsb0rZQ9Mg4VKDd_G_s",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8081/accessAdmin",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8081",
+									"path": [
+										"accessAdmin"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "User",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJsZW9uZWwiLCJpYXQiOjE2OTkyMjIzNzksImV4cCI6MTY5OTMwODc3OX0.9bq9VpaIESy3vf-OTPAvhXVB2p1l5hIZafRK7-1pFj4",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8081/accessUser",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8081",
+									"path": [
+										"accessUser"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Invited",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJpbnZpdGFkbyIsImlhdCI6MTY5OTIyMjQyMiwiZXhwIjoxNjk5MzA4ODIyfQ.R_X5-WHv7xoQSVBqcIKyMYJUR2kzoJD8fhtp7Mi3p9Y",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8081/accessInvited",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8081",
+									"path": [
+										"accessInvited"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Hello Secured",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "123",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/helloSecured",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"helloSecured"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8081/deleteUser",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "1234",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "facundo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "id",
+									"value": "2",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8081/deleteUser",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"deleteUser"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8081/createUser",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "1234",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "facundo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"probando@email.com\",\r\n    \"username\": \"facu\",\r\n    \"password\": \"123\",\r\n    \"roles\":[\"USER\"]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/createUser",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"createUser"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Test Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\":\"facundo1\",\r\n    \"password\":\"1234\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"login"
 							]
 						}
 					},
